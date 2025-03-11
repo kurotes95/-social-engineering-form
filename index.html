@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Engineering Observation Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Social Engineering Experiment - Observation Form</h2>
+    <form id="dataForm">
+        <label for="observerName">Observer Name:</label>
+        <input type="text" id="observerName" name="observerName">
+
+        <label for="dateTime">Date & Time:</label>
+        <input type="datetime-local" id="dateTime" name="dateTime">
+
+        <label>Location Type:</label>
+        <input type="radio" name="location" value="Uber Ride"> Uber Ride
+        <input type="radio" name="location" value="Coffee Shop"> Coffee Shop
+        <input type="radio" name="location" value="Customer Service"> Customer Service Interaction
+        <input type="radio" name="location" value="Other"> Other: <input type="text" name="otherLocation">
+
+        <label>Engagement Level:</label>
+        <input type="radio" name="engagement" value="Passive"> Passive (Minimal response, mostly listening)
+        <input type="radio" name="engagement" value="Active"> Active (Asking questions, engaging in conversation)
+
+        <label>Participant Characteristics:</label>
+        Gender: <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Non-binary"> Non-binary/Other
+        <input type="radio" name="gender" value="Unsure"> Unsure
+
+        <label>Race/Ethnicity:</label>
+        <select name="race">
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Hispanic">Hispanic</option>
+            <option value="Asian">Asian</option>
+            <option value="Middle Eastern">Middle Eastern</option>
+            <option value="Other">Other</option>
+            <option value="Unsure">Unsure</option>
+        </select>
+
+        <label>Immigrant Status:</label>
+        <input type="radio" name="immigrant" value="Likely Immigrant"> Likely Immigrant
+        <input type="radio" name="immigrant" value="Likely Local"> Likely Local
+        <input type="radio" name="immigrant" value="Unsure"> Unsure
+
+        <label>Age Group:</label>
+        <input type="radio" name="age" value="18-25"> 18-25
+        <input type="radio" name="age" value="26-40"> 26-40
+        <input type="radio" name="age" value="41-60"> 41-60
+        <input type="radio" name="age" value="60+"> 60+
+
+        <label>Information Disclosure Classification:</label>
+        <input type="radio" name="disclosure" value="Level 1"> Level 1 – Basic Pleasantries
+        <input type="radio" name="disclosure" value="Level 2"> Level 2 – Mild Personal Details
+        <input type="radio" name="disclosure" value="Level 3"> Level 3 – Moderate Personal Information
+        <input type="radio" name="disclosure" value="Level 4"> Level 4 – Sensitive Personal Information
+        <input type="radio" name="disclosure" value="Level 5"> Level 5 – Highly Confidential Information
+
+        <label>Contextual Factors:</label>
+        Time of Day:
+        <input type="radio" name="timeOfDay" value="Morning"> Morning
+        <input type="radio" name="timeOfDay" value="Afternoon"> Afternoon
+        <input type="radio" name="timeOfDay" value="Evening"> Evening
+        <input type="radio" name="timeOfDay" value="Late Night"> Late Night
+
+        Conversation Length:
+        <input type="radio" name="conversationLength" value="Under 2 min"> Under 2 min
+        <input type="radio" name="conversationLength" value="2-5 min"> 2-5 min
+        <input type="radio" name="conversationLength" value="5-10 min"> 5-10 min
+        <input type="radio" name="conversationLength" value="10+ min"> 10+ min
+
+        General Mood of the Conversation:
+        <input type="radio" name="mood" value="Friendly"> Friendly
+        <input type="radio" name="mood" value="Neutral"> Neutral
+        <input type="radio" name="mood" value="Reserved"> Reserved
+        <input type="radio" name="mood" value="Defensive"> Defensive
+
+        <label for="notes">Observer Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" onclick="downloadData()">Download Data</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
